@@ -32,7 +32,7 @@ class Message(models.Model, DateTimeMixin):
     content = models.CharField(max_length=512)
 
     def __str__(self):
-        return f'{self.user.username}: {self.content}'
+        return f'{self.user.first_name}: {self.content}'
 
     class Meta:
         verbose_name = "message"
